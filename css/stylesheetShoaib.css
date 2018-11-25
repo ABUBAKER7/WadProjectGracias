@@ -38,8 +38,8 @@ body{
 .login-container{
 
     background-color: #f1f1f1;
-    padding: 20px;
-    border-radius: 2%;
+    margin-top: -45px;
+    padding: 50px;
     box-shadow: 5px 8px 8px #8888BA;
 }
 .login-input{
@@ -111,4 +111,3 @@ div.footer-socialmedia>i{
 /*.banner-image{*/
 /*background-image: url("banner.jpg");*/
 /*background-repeat: no-repeat;*/
-/
