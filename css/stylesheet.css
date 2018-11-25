@@ -7,12 +7,12 @@
 }
 .login-container{
     margin: auto;
-    margin-top: 90px;
-    width: 430px;
+    margin-top: 50px;
+    width: 425px;
     background-color: #f1f1f1;
     padding: 20px;
     border-radius: 2%;
-    box-shadow: 5px 8px 8px #888888;
+    box-shadow: 5px 8px 8px #8888BA;
 }
 .login-input{
     /*border-radius: 2%;*/
