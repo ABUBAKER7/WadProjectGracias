@@ -1,3 +1,4 @@
+/*ansari*/
 .nav-bar-container{
     width: auto;
     margin: 10px 0px 0px 50px;
@@ -41,4 +42,19 @@
 }
 footer> div{
     padding: 20px;
+}
+footer{
+    margin-top: 50px;
+}
+
+/*Abdullah*/
+.ex1
+{
+    width:800px;
+}
+.Developers
+{
+    border-radius: 360px;
+    cursor: help;
+    max-width: 200px;
 }
