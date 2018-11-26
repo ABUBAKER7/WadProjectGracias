@@ -36,51 +36,9 @@
 .jumbotron-fluid{
     height: 400px;
 }
-.footer{
-    width: auto;
-    background-color: #6c757d;
-    color: white;
-    height: 350px;
-    padding: 20px;
-}
-.footer-input{
-    border-radius: inherit;
-}
-div.footer-jumbotron > h1{
-    padding: 10px;
-}
-.nav-link{
-    color: #6c757d;
-}
-div.footer > ul.nav-link :hover{
-    color: #6c757d;
-    background-color: white;
-}
-.footer-nav-links{
-    color: gainsboro;
-}
-.footer-nav-links:hover{
-    /*background-color: gainsboro;*/
+.footer_{
     color: white;
 }
-div.footer-jumbotron > input{
+footer> div{
     padding: 20px;
 }
-.footer-jumbotron{
-    width: 680px;
-    margin: auto;
-}
-div.footer-menu> ul>li> a{
-
-    margin-left: 10px;
-}
-div.footer-socialmedia>i{
-    width: 100px;
-    height: 50px;
-    margin-top: 50px;
-    margin-left: 100px;
-}
-/*.banner-image{*/
-    /*background-image: url("banner.jpg");*/
-    /*background-repeat: no-repeat;*/
-/*}*/
