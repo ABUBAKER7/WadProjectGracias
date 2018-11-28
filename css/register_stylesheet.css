@@ -1,5 +1,5 @@
 /*Shoaib */
-@media screen and (max-width: 320px) {
+@media  screen and(max-width: 320px) {
     label{
         display: none;
     }
@@ -42,6 +42,14 @@ body{
     margin-top: -45px;
     padding: 50px;
     box-shadow: 5px 8px 8px #8888BA;
+}
+
+.marginleft{
+    margin-left: 5rem;
+}
+
+.marginright{
+    margin-left: -43px;
 }
 .login-input{
     /*border-radius: 2%;*/
@@ -112,3 +120,49 @@ div.footer-socialmedia>i{
 /*.banner-image{*/
 /*background-image: url("banner.jpg");*/
 /*background-repeat: no-repeat;*/
+
+
+.my_container {
+    background-color: #f1f1f1;
+    margin-top: -45px;
+
+    margin-left: 80px;
+    margin-right: 80px;
+    padding-left: 40px;
+    padding-right: 70px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    box-shadow: 5px 8px 8px #8888BA;
+}
+.fontstyle{
+    font-size: 1rem;
+    font-weight: 300;
+}
+@media (max-width: 576px) {
+    .my_container {
+        max-width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .my_container {
+        max-width: 720px;
+
+    }
+}
+
+@media (max-width: 992px) {
+    .my_container {
+        max-width: 960px;
+
+    }
+}
+
+@media (max-width: 1200px) {
+    .my_container {
+        max-width: 1140px;
+
+    }
+}
