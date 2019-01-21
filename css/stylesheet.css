@@ -151,3 +151,7 @@ footer{
     cursor: help;
     max-width: 200px;
 }
+
+input[name='pro_name']:invalid {
+    background-color: red;
+}

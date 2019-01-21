@@ -1,3 +1,25 @@
+<?php
+
+require_once "db_connection.php";
+if(isset($_POST['sign_up']))
+{
+    $pro_name = $_POST['pro_name'];
+    $pro_email =$_POST['pro_email'];
+    $pro_num = $_POST['pro_num'];
+    $pro_password =$_POST['pro_password'];
+    $pro_birthdate = $_POST['pro_birthdate'];
+    $pro_gender = $_POST['pro_gender'];
+
+    $insert_product = "insert into registration (full_name , phone_number , email , pasword , gender , dob) 
+                  VALUES ('$pro_name','$pro_num','$pro_email','$pro_password','$pro_gender','$pro_birthdate');";
+    $sign_up = mysqli_query($con, $insert_product);
+    if($sign_up){
+        header("location: ".$_SERVER['PHP_SELF']);
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +61,7 @@
                 <a class="nav-link " href="login.html">Login</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="register.html">Sign Up</a>
+                <a class="nav-link" href="register.php">Sign Up</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="forgotpassword.html">Forgot Password</a>
@@ -54,7 +76,7 @@
 
 <div class="container  mt-3"> <h4 class="my-4 marginleft lead "><i class="fas fa-user-alt"></i><span class="d-none d-sm-inline "> Create your  </span> Gracias Account </h4></div>
 <div class="container bg-white mt-2 pt-5 pb-5">
-    <form class="my_container">
+    <form class="my_container" action="register.php" method="post" enctype="multipart/form-data">
         <div class="row">
             <div class="col-sm-2   col-md-2">
                 <label class="float-md-right d-none d-sm-inline "> <span class="d-none d-lg-inline  "> Full</span> Name:  </label>
@@ -65,7 +87,7 @@
                     <div class="input-group-prepend">
                         <div class="input-group-text"><i class="fas fa-file-signature"></i></div>
                     </div>
-                    <input type="text" class="form-control fontstyle"  placeholder="Enter Full Name" >
+                    <input type="text" class="form-control fontstyle" id="pro_name"  name="pro_name"  placeholder="Enter Full Name" >
                 </div>
             </div>
             <div class="mt-sm-1 mt-lg-0 col-sm-2  mt-2  col-md-2">
@@ -76,7 +98,7 @@
                     <div class="input-group-prepend">
                         <div class="input-group-text"><i class="fas fa-envelope"></i></div>
                     </div>
-                    <input type="text" class="form-control fontstyle"  placeholder="Enter email" >
+                    <input type="text" class="form-control fontstyle" id="pro_email"  name="pro_email"  placeholder="Enter email" >
                 </div>
             </div>
         </div>
@@ -89,7 +111,7 @@
                     <div class="input-group-prepend">
                         <div class="input-group-text"><i class="fas fa-phone"></i></div>
                     </div>
-                    <input type="text" class="form-control fontstyle" placeholder="Enter Phone Number " >
+                    <input type="text" class="form-control fontstyle"  id="pro_num"  name="pro_num" placeholder="Enter Phone Number " >
                 </div>
             </div>
             <div class=" mt-sm-1  mt-lg-0 col-sm-2    col-md-2">
@@ -100,31 +122,31 @@
                     <div class="input-group-prepend">
                         <div class="input-group-text"><i class="fas fa-file-signature"></i></div>
                     </div>
-                    <input type="text" class="form-control fontstyle"  placeholder="SMS Verification Code " >
+                    <input type="text" class="form-control fontstyle" id="pro_code"   placeholder="SMS Verification Code " >
                 </div>
             </div>
         </div>
         <div class="row my-2 mt-lg-4">
             <div class=" mt-sm-1 mt-lg-0 col-sm-2 col-md-2">
-                <label  class=" float-md-right d-none d-sm-inline"> <span class="d-none d-lg-inline"></span>Password*:</label>
+                <label  class=" float-md-right d-none d-sm-inline"> <span class="d-none d-lg-inline"></span>Password:</label>
             </div>
             <div class="mt-sm-1  mt-lg-0 col-12 col-sm-10 col-md-4">
                 <div class="input-group ">
                     <div class="input-group-prepend">
                         <div class="input-group-text"><i class="fas fa-key"></i></div>
                     </div>
-                    <input class="form-control fontstyle"  placeholder="Minimum lenght 6">
+                    <input type="password" class="form-control fontstyle" id="pro_password"  name="pro_password" placeholder="Minimum lenght 6">
                 </div>
             </div>
             <div class=" mt-sm-1 mt-lg-0 col-sm-2    col-md-2">
-                <label class="float-md-right d-none d-sm-inline"><span class="d-none d-lg-inline"></span> Birthday:</label>
+                <label class="float-md-right d-none d-sm-inline"><span class="d-none d-lg-inline"></span> Birth Date:</label>
             </div>
             <div class="mt-sm-1 mt-lg-0 col-12 col-sm-10 mt-2  col-md-4">
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <div class="input-group-text"><i class="fas fa-birthday-cake"></i></div>
                     </div>
-                    <input class="form-control fontstyle"  type="date" id="start" name="trip-start">
+                    <input class="form-control fontstyle"  type="date" id="start" name="pro_birthdate">
                 </div>
 
             </div>
@@ -139,7 +161,7 @@
                     <div class="input-group-prepend">
                         <div class="input-group-text"><i class="fas fa-list-alt"></i></div>
                     </div>
-                    <select class="form-control fontstyle" >
+                    <select class="form-control fontstyle" id="pro_gender"  name="pro_gender" >
                         <option>Gender</option>
                         <option>Male</option>
                         <option>Female</option>
@@ -150,7 +172,7 @@
 
         <div class="row my-2 mt-lg-4">
             <div class="mt-sm-1 mt-lg-0  offset-sm-2 col-12 col-sm-10 col-md-4">
-                <button type="submit" class="btn btn-outline-info  btn-block fontstyle"><i class="fas fa-plus"></i> SIGN UP </button>
+                <button type="submit" name="sign_up" class="btn btn-outline-info  btn-block fontstyle"><i class="fas fa-plus"></i> SIGN UP </button>
             </div>
         </div>
     </form>
@@ -214,7 +236,7 @@
                         <a class="nav-link" href="login.html">Your Account</a>
                     </li>
                     <li class="footer-links">
-                        <a class="nav-link" href="register.html">Become a Member</a>
+                        <a class="nav-link" href="register.php">Become a Member</a>
                     </li>
                     <li class="footer-links">
                         <a class="nav-link" href="aboutus.html">About Us</a>
