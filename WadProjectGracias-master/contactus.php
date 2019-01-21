@@ -1,6 +1,6 @@
 
 <?php
-include("server/dbcontactus.php");
+include("dbcontactus.php");
 
 $name = '';
 $email = '';
