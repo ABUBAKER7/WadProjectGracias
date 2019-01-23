@@ -10,9 +10,12 @@ if(isset($_POST['sign_up']))
     $pro_birthdate = $_POST['pro_birthdate'];
     $pro_gender = $_POST['pro_gender'];
 
-    $insert_product = "insert into registration (full_name , phone_number , email , pasword , gender , dob) 
+    $insert_user = "insert into registration (full_name , phone_number , email , pasword , gender , dob) 
                   VALUES ('$pro_name','$pro_num','$pro_email','$pro_password','$pro_gender','$pro_birthdate');";
-    $sign_up = mysqli_query($con, $insert_product);
+    $sign_up = mysqli_query($con, $insert_user);
+
+    $inert_login="insert into login(login_email, login_password) VALUES ('$pro_email','$pro_password');";
+    $login=mysqli_query($con, $inert_login);
     if($sign_up){
         header("location: ".$_SERVER['PHP_SELF']);
     }
