@@ -90,7 +90,7 @@ if(isset($_POST['sign_up']))
                     <div class="input-group-prepend">
                         <div class="input-group-text"><i class="fas fa-file-signature"></i></div>
                     </div>
-                    <input type="text" class="form-control fontstyle" id="c_name"  name="pro_name"  placeholder="Enter Full Name"
+                    <input type="text" class="form-control fontstyle" id="id_name"  name="pro_name"  placeholder="Enter Full Name"
                            required pattern="^[A-Z]?[a-z]\w*?" >
                 </div>
             </div>
@@ -116,7 +116,7 @@ if(isset($_POST['sign_up']))
                     <div class="input-group-prepend">
                         <div class="input-group-text"><i class="fas fa-phone"></i></div>
                     </div>
-                    <input type="text" class="form-control fontstyle"  id="pro_num"  name="pro_num" placeholder="Enter Phone Number " required pattern="\d{11}" >
+                    <input type="text" class="form-control fontstyle"  id="pro_num"  name="pro_num" placeholder="Enter Phone Number " required pattern="^(03|\+92(\s|-)?3|0092(\s|-)?3)\d{2}(\s|-)?\d{7}$" >
                 </div>
             </div>
             <div class=" mt-sm-1  mt-lg-0 col-sm-2    col-md-2">
