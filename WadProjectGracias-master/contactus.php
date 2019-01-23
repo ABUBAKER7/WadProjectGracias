@@ -1,24 +1,15 @@
-
-<?php
-include("dbcontactus.php");
-
-$name = '';
-$email = '';
-$subject = '';
-$message = '';
-if (isset($_POST)) {
-	// print_r($_POST);die();
-	$name=$_POST['name'];
-	$email=$_POST['email'];
-	$subject=$_POST['subject'];
-	$message=$_POST['message'];
-
-
-// inserting date to table
-
-$query=mysqli_query($conn,"INSERT INTO contact_us(name,email,subject,message)  VALUES ('$name','$email','$subject','$message')") or die(mysqli_error($conn));
-
-mysqli_close($conn);
+<?php 
+require_once("dbcontactus.php");
+if((isset($_POST['name'])&& $_POST['name'] !='') && (isset($_POST['email'])&& $_POST['email'] !='')&& (isset($_POST['subject'])&& $_POST['subject'] !='')&& (isset($_POST['message'])&& $_POST['message'] !=''))
+{
+ 
+$name = $conn->real_escape_string($_POST['name']);
+$email = $conn->real_escape_string($_POST['email']);
+$subject = $conn->real_escape_string($_POST['subject']);
+$message = $conn->real_escape_string($_POST['message']);
+ 
+$query=mysqli_query($conn,"INSERT INTO contact_us(name, email, subject, message) VALUES ('".$name."','".$email."', '".$subject."', '".$message."')") or die(mysqli_error($conn));
+header('Location: contactus.php?success=true');
 }
 
 ?>
@@ -38,6 +29,7 @@ mysqli_close($conn);
 
 
     <!--link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Old+Standard+TT">
@@ -46,13 +38,40 @@ mysqli_close($conn);
         img {
             width: 100%;
             height: auto;
-        }
+        }        
+  body { 
+  background: url(c2.jpg)
+ no-repeat center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
 
-    </style>
+}
 
-
+</style>
 </head>
-<body style="background-color:#e9ecef">
+<?php
+    
+     if( isset($_GET['success']) && $_GET['success'] == true){  ?>
+         <script type='text/javascript'>
+         	
+         	if (window.confirm('Your Message Submitted Successfully.'))
+			{
+			   window.location = "contactus.php";
+			}
+			else
+			{
+			   window.location = "contactus.php";
+			}
+        </script>
+      <?php } ?>
+
+      
+
+
+
+<body>
 <!--new navbar responsive-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Gracias</a>
@@ -89,13 +108,13 @@ mysqli_close($conn);
 </nav>
 
 
-<div class="container">
+<div class="container" style="color: white" >
     <h1 class="text-center my-4">CONTACT US </h1>
 
 <!-- //////////////// -->
 
         
-        <div class="row" style="margin-top: 45px">
+        <div class="row" style="margin-top: 45px; ">
             <div class="col-xs-2 col-sm-5 col-md-6 col-lg-6  ">
 
                 <div>
@@ -109,7 +128,7 @@ mysqli_close($conn);
                     <i class="fab fa-google-plus-g"></i>
                 </div>
                 <br>
-                <div>
+                <div >
                     <h4> ADDRESS</h4>
                     <H6><i class="fas fa-map-marker-alt"></i> 1-Khayaban-e-Jinnah،Road<br>Johar Town,Lahore,Punjab</H6>
                 </div>
@@ -130,24 +149,18 @@ mysqli_close($conn);
 
             <div class="col-xs-2 col-sm-5 col-md-6 col-lg-6 ">
                 <div>
+                	
                     <h3>GET IN TOUCH</h3>
                     <h6>Please complete and submit this form and We will reply you as soon as possible.</h6>
                     <div>
 
-                    	<!-- <form action="user_process.php" method="post" name="contactus">
-		Name: <input type="text" name="name" value=""><br>
-		emai: <input type="text" name="email" value=""><br>
-		subject: <input type="text" name="subject" value=""><br>
-		Message: <textarea name="message"></textarea>
-		<input type="submit" value="submit">
-		
-	</form> -->
+                    
                     	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" name="contactus">
                         <div class="form-group ">
                             <input type="text" class="form-control" placeholder="Name" name="name" value="" required="">
                         </div>
                         <div class="form-group ">
-                            <input type="text" placeholder="email address" class="form-control" name="email" value="" required="" pattern="[^ @]*@[^ @]*" >
+                            <input type="text" placeholder="example@example.com" class="form-control" name="email" value="" required="" pattern="[^ @]*@[^ @]*" >
                         </div>
                     </div>
 
@@ -158,26 +171,17 @@ mysqli_close($conn);
 
 
                     <div class="form-group">
-                        <textarea class="form-control" rows="4" placeholder="Message" name="message" required=""></textarea>
+                        <textarea class="form-control" rows="4" placeholder="leave your Message" name="message" required=""></textarea>
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-default" value="submit" onclick="Confirm(this.form)" style="width: 125px; height: 40px;
+                        <button type="submit" class="btn btn-default" value="submit" style="width: 125px; height: 40px;
                         background-color:springgreen"><h5><b>SUBMIT</b></h5></button>
                     </div>
 
                 </div>
             </form>
+            
             </div>
-
-<script type="text/javascript">
-	function Confirm(form){
-		if (isset($_POST) != '') {
-			alert('Record insert successfully');
-			form.submit();	
-		}
-		
-	}
-</script> 
 
         </div>
  
@@ -274,8 +278,7 @@ mysqli_close($conn);
 
             </div>
         </div>
-    </div>
-   
+    </div>   
 </footer>
 </body>
 </html>
