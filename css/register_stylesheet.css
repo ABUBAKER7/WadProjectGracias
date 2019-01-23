@@ -166,3 +166,7 @@ div.footer-socialmedia>i{
 
     }
 }
+
+input[name='pro_name']:invalid {
+    background-color: red;
+}
