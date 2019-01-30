@@ -9,11 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Old+Standard+TT">
-    <link rel="stylesheet" href="css/stylesheet.css">
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <link rel="stylesheet" href="../css/stylesheet.css">
 
 
 
@@ -31,22 +31,22 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contactus.html">Contact Us</a>
+                <a class="nav-link" href="contactus.php">Contact Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="aboutus.html">About Us</a>
+                <a class="nav-link" href="aboutus.php">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="login.html">Login</a>
+                <a class="nav-link " href="login.php">Login</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="register.html">Sign Up</a>
+                <a class="nav-link" href="register.php">Sign Up</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="forgotpassword.html">Forgot Password</a>
+                <a class="nav-link" href="forgotpassword.php">Forgot Password</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -82,7 +82,7 @@
     <div class="row">
 
         <div>
-            <img class = "Developers" src="Images/pp1.jpg" style="margin-right: 50px; margin-left: 70px">
+            <img class = "Developers" src="../Images/pp1.jpg" style="margin-right: 50px; margin-left: 70px">
             <div class="Info col-sm-2 " style="margin-top: 20px; margin-right: 50px; margin-left: 50px">
                 <b>ABDULLAH SHAFIQUE</b> <br>
                 <b>03124038880</b> <br>
@@ -92,7 +92,7 @@
         </div>
 
         <div>
-            <img class = "Developers" src="Images/pp2.jpg" style="margin-right: 50px; margin-left: 100px">
+            <img class = "Developers" src="../Images/pp2.jpg" style="margin-right: 50px; margin-left: 100px">
             <div class="Info col-sm-2 " style="margin-top: 20px; margin-right: 50px; margin-left: 100px">
                 <b>M. ABUBAKER</b> <br>
                 <b>03355969393</b> <br>
@@ -102,7 +102,7 @@
         </div>
 
         <div>
-            <img class = "Developers" src="Images/pp3.jpg" style="margin-right: 50px; margin-left: 100px">
+            <img class = "Developers" src="../Images/pp3.jpg" style="margin-right: 50px; margin-left: 100px">
             <div class="Info col-sm-2 " style="margin-top: 20px; margin-right: 50px; margin-left: 100px">
                 <b>M. ZAHID RAMZAN</b> <br>
                 <b>003157513094</b> <br>
@@ -116,7 +116,7 @@
             <div class="row">
 
                 <div>
-                    <img class = "Developers" src="Images/pp4.jpg" style="margin-top: 40px; margin-right: 50px; margin-left: 70px">
+                    <img class = "Developers" src="../Images/pp4.jpg" style="margin-top: 40px; margin-right: 50px; margin-left: 70px">
                     <div class="Info col-sm-2 " style="margin-top: 10px; margin-right: 50px; margin-left: 50px">
                         <b>RANA MAROOF</b> <br>
                         <b>03078127004</b> <br>
@@ -126,7 +126,7 @@
                 </div>
 
                 <div>
-                    <img class = "Developers" src="Images/pp5.jpg" style="margin-top: 40px; margin-right: 50px; margin-left: 130px">
+                    <img class = "Developers" src="../Images/pp5.jpg" style="margin-top: 40px; margin-right: 50px; margin-left: 130px">
                     <div class="Info col-sm-2 " style="margin-top: 20px; margin-right: 50px; margin-left: 130px">
                         <b>SHOAIB AKRAM</b> <br>
                         <b>03211145424</b> <br>
@@ -136,7 +136,7 @@
                 </div>
 
                 <div>
-                    <img class = "Developers" src="Images/pp6.jpg" style="margin-top: 40px; margin-right: 50px; margin-left: 100px">
+                    <img class = "Developers" src="../Images/pp6.jpg" style="margin-top: 40px; margin-right: 50px; margin-left: 100px">
                     <div class="Info col-sm-2 " style="margin-top: 20px; margin-right: 50px; margin-left: 100px">
                         <b>MAAZ BUKHSH</b> <br>
                         <b>03228602733</b> <br>
@@ -205,13 +205,13 @@
                 <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <ul class="navbar-nav mr-auto">
                     <li class="footer-links">
-                        <a class="nav-link" href="login.html">Your Account</a>
+                        <a class="nav-link" href="login.php">Your Account</a>
                     </li>
                     <li class="footer-links">
-                        <a class="nav-link" href="register.html">Become a Member</a>
+                        <a class="nav-link" href="register.php">Become a Member</a>
                     </li>
                     <li class="footer-links">
-                        <a class="nav-link" href="aboutus.html">About Us</a>
+                        <a class="nav-link" href="aboutus.php">About Us</a>
                     </li>
                 </ul>
             </div>

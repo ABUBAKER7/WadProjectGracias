@@ -1,26 +1,62 @@
-<!DOCTYPE HTML>
-<html>
+<?php
+   include "db_connection.php";
+
+   session_start();
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<title>forget</title>
+
 <head>
 
     <meta charset="UTF-8">
-    <meta name="description" content="aboutus">
+    <meta name="description" content="forgotpassword">
     <meta name="keywords" content="HTML,CSS,BOOTSTRAP">
-    <meta name="author" content="Abdullah">
+    <meta name="author" content="ABUBAKER">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta http-equiv="refresh" content="60">
 
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Old+Standard+TT">
-    <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="css/stylesheet.css">
 
 
+   <script>
 
+
+        function checkmail(str) {
+            //console.log(str);
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("email").innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "check_email.php?e=" + str, true);
+            xmlhttp.send();
+
+        }
+    </script>
+
+
+
+    <style>
+        .mid{
+            margin: auto;
+            margin-top: 39px;
+            width: 385px;
+            padding: 40px;
+            border-radius: 5%;
+            box-shadow: -3px 9px 9px #8888BA;
+            text-align: center;
+            background-color: #F1F0F2
+        }
+    </style>
 </head>
-
 <body>
-
 <!--new navbar responsive-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Gracias</a>
@@ -43,7 +79,7 @@
                 <a class="nav-link " href="login.html">Login</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="register.php">Sign Up</a>
+                <a class="nav-link" href="register.html">Sign Up</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="forgotpassword.html">Forgot Password</a>
@@ -55,98 +91,62 @@
         </form>
     </div>
 </nav>
-<!--About Us-->
 
-<div class="jumbotron jumbotron-fluid banner-image">
-    <div class="container">
-        <h1 class="display-4">About Us</h1>
-        <div class="ex1">
-            Gracias.pk is a dream to change the fashion trend of pakistan. This is a company birthed out of an ambitious investment in the fashion industry 			by the visionary team. We believe in satisfying customers through our quality and brilliant customer service. You will find 						the most soft and trending clothes for men in our store. You wont find the vast varity of Men's Fashion any where in the world
-        </div>
-        <br>
-        <div class="ex1">
-            As the progressive world is moving towards digitalization we are operational only online. We will be opening Retail very soon.
-        </div>
-        <br>
-        <div class="ex1">
-            The company is steadily growing and now has set foot in the international market, with aims to elevate the brand into a truly global player.
-        </div>
-        <hr class="my-4">
+<div class="container mid">
+    <div>
+        <h5><i class="fa fa-lock fa-4x "></i></h5>
+        <h2>Forgot Password?</h2>
+        <p>You can reset your password here.</p>
+    </div>
+    <div>
+        <form id="register-form" role="form" autocomplete="off" class="form" action="" method="post">
+            <div class="form-group">
+
+                <div class="input-group">
+
+                        <input class="form-control" id="email" name="email" placeholder=" email address"   type="email"
+                               style="height: 40px; border: inset; " onkeyup="checkmail(this.value)">
+                               <span  id="email"></span>
+
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <input name="recover-submit" class="btn btn-lg" value="Reset Password" type="submit"
+                       style=" width: 240px;height: 48px;background: aqua;border-radius: 20px;">
+            </div>
+
+        </form>
     </div>
 </div>
 
-<!--first row of imgs-->
 
-<div class="container">
-    <h1 class="display-4">Developers</h1>
-    <div class="row">
 
-        <div>
-            <img class = "Developers" src="Images/pp1.jpg" style="margin-right: 50px; margin-left: 70px">
-            <div class="Info col-sm-2 " style="margin-top: 20px; margin-right: 50px; margin-left: 50px">
-                <b>ABDULLAH SHAFIQUE</b> <br>
-                <b>03124038880</b> <br>
-                <a href = "abdullah.shafique5555@gmail.com"><b>EMAIL</b></a> <br>
-                <a href = "https://www.facebook.com/abdullah.shafique.313"><b>FACEBOOK</b></a> <br>
-            </div>
-        </div>
+<?php
+$email='';
+if(isset($_POST['recover-submit'])){
+    $email = $_POST['email'];
+    $_SESSION['value']=$email;
+    if(empty($email))
+    {
+        echo 'Please enter email first';
+    }
+    else{
+    $sel_user = "select * from registration where email='$email'";
+    $run_user = mysqli_query($con, $sel_user);
+    $check_user = mysqli_num_rows($run_user);
+    if($check_user==0){
+          header("Location: show_msg.php");
+    }
+    else {
+           header("Location: changepassword.php"); /* Redirect browser */
 
-        <div>
-            <img class = "Developers" src="Images/pp2.jpg" style="margin-right: 50px; margin-left: 100px">
-            <div class="Info col-sm-2 " style="margin-top: 20px; margin-right: 50px; margin-left: 100px">
-                <b>M. ABUBAKER</b> <br>
-                <b>03355969393</b> <br>
-                <a href = "Abubakar7@ucp.edu.pk"><b>EMAIL</b></a> <br>
-                <a href = "https://www.facebook.com/profile.php?id=100007037583136"><b>FACEBOOK</b></a> <br>
-            </div>
-        </div>
+         }
+     
+}}
 
-        <div>
-            <img class = "Developers" src="Images/pp3.jpg" style="margin-right: 50px; margin-left: 100px">
-            <div class="Info col-sm-2 " style="margin-top: 20px; margin-right: 50px; margin-left: 100px">
-                <b>M. ZAHID RAMZAN</b> <br>
-                <b>003157513094</b> <br>
-                <a href = "zahidensari116@ucp.edu.pk"><b>EMAIL</b></a> <br>
-                <a href = "https://www.facebook.com/profile.php?id=100010142373715"><b>FACEBOOK</b></a> <br>
-            </div>
-        </div>
-    </div>
-
-<!--second row of imgs-->
-            <div class="row">
-
-                <div>
-                    <img class = "Developers" src="Images/pp4.jpg" style="margin-top: 40px; margin-right: 50px; margin-left: 70px">
-                    <div class="Info col-sm-2 " style="margin-top: 10px; margin-right: 50px; margin-left: 50px">
-                        <b>RANA MAROOF</b> <br>
-                        <b>03078127004</b> <br>
-                        <a href = "maroofrana10@gmail.com"><b>EMAIL</b></a> <br>
-                        <a href = "https://www.facebook.com/rana.maroof.12"><b>FACEBOOK</b></a> <br>
-                    </div>
-                </div>
-
-                <div>
-                    <img class = "Developers" src="Images/pp5.jpg" style="margin-top: 40px; margin-right: 50px; margin-left: 130px">
-                    <div class="Info col-sm-2 " style="margin-top: 20px; margin-right: 50px; margin-left: 130px">
-                        <b>SHOAIB AKRAM</b> <br>
-                        <b>03211145424</b> <br>
-                        <a href = "Shoaibakram756@gmail.com"><b>EMAIL</b></a> <br>
-                        <a href = "https://www.facebook.com/ms112962"><b>FACEBOOK</b></a> <br>
-                    </div>
-                </div>
-
-                <div>
-                    <img class = "Developers" src="Images/pp6.jpg" style="margin-top: 40px; margin-right: 50px; margin-left: 100px">
-                    <div class="Info col-sm-2 " style="margin-top: 20px; margin-right: 50px; margin-left: 100px">
-                        <b>MAAZ BUKHSH</b> <br>
-                        <b>03228602733</b> <br>
-                        <a href = "maazbukhsh7@gmail.com"><b>EMAIL</b></a> <br>
-                        <a href = "https://www.facebook.com/maaz.bukhsh.3"><b>FACEBOOK</b></a> <br>
-                    </div>
-                </div>
-            </div>
-    </div>
-
+?>
 
 
 <!--footer -->
@@ -208,7 +208,7 @@
                         <a class="nav-link" href="login.html">Your Account</a>
                     </li>
                     <li class="footer-links">
-                        <a class="nav-link" href="register.php">Become a Member</a>
+                        <a class="nav-link" href="register.html">Become a Member</a>
                     </li>
                     <li class="footer-links">
                         <a class="nav-link" href="aboutus.html">About Us</a>
@@ -232,9 +232,8 @@
         </div>
     </div>
 </footer>
+
+
+
 </body>
-
 </html>
-
-
-
