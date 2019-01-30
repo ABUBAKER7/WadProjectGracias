@@ -40,6 +40,27 @@ if(isset($_POST['sign_up']))
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Old+Standard+TT">
     <link rel="stylesheet" href="css/register_stylesheet.css">
 
+    <script>
+        function checkEmail(str) {
+            if (str.length == 0) {
+                document.getElementById("hint").innerHTML = "";
+                return;
+            } else {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function()
+                {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("hint").innerHTML = this.responseText;
+                    }
+                };
+                xmlhttp.open("GET", "check_email.php?e=" + str, true);
+                xmlhttp.send();
+                //document.getElementById('hint').innerHTML = 'loading...';
+            }
+        }
+    </script>
+
+
 </head>
 <body>
 <!--new navbar responsive-->
@@ -103,8 +124,9 @@ if(isset($_POST['sign_up']))
                         <div class="input-group-text"><i class="fas fa-envelope"></i></div>
                     </div>
                     <input type="text" class="form-control fontstyle" id="pro_email"  name="pro_email"  placeholder="Enter email"
-                           required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-                </div>
+                           onkeyup="checkEmail(this.value)" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                    <span class="text-danger" id="hint"></span>
+            </div>
             </div>
         </div>
         <div class="row my-2 mt-lg-4">
@@ -265,5 +287,7 @@ if(isset($_POST['sign_up']))
         </div>
     </div>
 </footer>
+
+
 </body>
 </html>
