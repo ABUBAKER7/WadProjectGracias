@@ -1,20 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
+
     <meta charset="UTF-8">
-
-    <meta name="description" content="login-gracias">
+    <meta name="description" content="aboutus">
+    <meta name="keywords" content="HTML,CSS,BOOTSTRAP">
+    <meta name="author" content="Abdullah">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="80">
 
-    <title>Login</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Old+Standard+TT">
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+
+
 </head>
+
 <body>
+
 <!--new navbar responsive-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Gracias</a>
@@ -25,22 +31,22 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contactus.html">Contact Us</a>
+                <a class="nav-link" href="contactus.php">Contact Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="aboutus.html">About Us</a>
+                <a class="nav-link" href="aboutus.php">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="login.html">Login</a>
+                <a class="nav-link " href="login.php">Login</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="register.php">Sign Up</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="forgotpassword.html">Forgot Password</a>
+                <a class="nav-link" href="forgotpassword.php">Forgot Password</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -49,25 +55,99 @@
         </form>
     </div>
 </nav>
+<!--About Us-->
 
-<form class="login-form">
-    <div class="login-container col-sm-10">
-    <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required placeholder="example@example.com">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+<div class="jumbotron jumbotron-fluid banner-image">
+    <div class="container">
+        <h1 class="display-4">About Us</h1>
+        <div class="ex1">
+            Gracias.pk is a dream to change the fashion trend of pakistan. This is a company birthed out of an ambitious investment in the fashion industry 			by the visionary team. We believe in satisfying customers through our quality and brilliant customer service. You will find 						the most soft and trending clothes for men in our store. You wont find the vast varity of Men's Fashion any where in the world
+        </div>
+        <br>
+        <div class="ex1">
+            As the progressive world is moving towards digitalization we are operational only online. We will be opening Retail very soon.
+        </div>
+        <br>
+        <div class="ex1">
+            The company is steadily growing and now has set foot in the international market, with aims to elevate the brand into a truly global player.
+        </div>
+        <hr class="my-4">
     </div>
-    <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control " id="exampleInputPassword1"  required placeholder="Password">
+</div>
+
+<!--first row of imgs-->
+
+<div class="container">
+    <h1 class="display-4">Developers</h1>
+    <div class="row">
+
+        <div>
+            <img class = "Developers" src="Images/pp1.jpg" style="margin-right: 50px; margin-left: 70px">
+            <div class="Info col-sm-2 " style="margin-top: 20px; margin-right: 50px; margin-left: 50px">
+                <b>ABDULLAH SHAFIQUE</b> <br>
+                <b>03124038880</b> <br>
+                <a href = "abdullah.shafique5555@gmail.com"><b>EMAIL</b></a> <br>
+                <a href = "https://www.facebook.com/abdullah.shafique.313"><b>FACEBOOK</b></a> <br>
+            </div>
+        </div>
+
+        <div>
+            <img class = "Developers" src="Images/pp2.jpg" style="margin-right: 50px; margin-left: 100px">
+            <div class="Info col-sm-2 " style="margin-top: 20px; margin-right: 50px; margin-left: 100px">
+                <b>M. ABUBAKER</b> <br>
+                <b>03355969393</b> <br>
+                <a href = "Abubakar7@ucp.edu.pk"><b>EMAIL</b></a> <br>
+                <a href = "https://www.facebook.com/profile.php?id=100007037583136"><b>FACEBOOK</b></a> <br>
+            </div>
+        </div>
+
+        <div>
+            <img class = "Developers" src="Images/pp3.jpg" style="margin-right: 50px; margin-left: 100px">
+            <div class="Info col-sm-2 " style="margin-top: 20px; margin-right: 50px; margin-left: 100px">
+                <b>M. ZAHID RAMZAN</b> <br>
+                <b>003157513094</b> <br>
+                <a href = "zahidensari116@ucp.edu.pk"><b>EMAIL</b></a> <br>
+                <a href = "https://www.facebook.com/profile.php?id=100010142373715"><b>FACEBOOK</b></a> <br>
+            </div>
+        </div>
     </div>
-    <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Stay loged in</label>
+
+    <!--second row of imgs-->
+    <div class="row">
+
+        <div>
+            <img class = "Developers" src="Images/pp4.jpg" style="margin-top: 40px; margin-right: 50px; margin-left: 70px">
+            <div class="Info col-sm-2 " style="margin-top: 10px; margin-right: 50px; margin-left: 50px">
+                <b>RANA MAROOF</b> <br>
+                <b>03078127004</b> <br>
+                <a href = "maroofrana10@gmail.com"><b>EMAIL</b></a> <br>
+                <a href = "https://www.facebook.com/rana.maroof.12"><b>FACEBOOK</b></a> <br>
+            </div>
+        </div>
+
+        <div>
+            <img class = "Developers" src="Images/pp5.jpg" style="margin-top: 40px; margin-right: 50px; margin-left: 130px">
+            <div class="Info col-sm-2 " style="margin-top: 20px; margin-right: 50px; margin-left: 130px">
+                <b>SHOAIB AKRAM</b> <br>
+                <b>03211145424</b> <br>
+                <a href = "Shoaibakram756@gmail.com"><b>EMAIL</b></a> <br>
+                <a href = "https://www.facebook.com/ms112962"><b>FACEBOOK</b></a> <br>
+            </div>
+        </div>
+
+        <div>
+            <img class = "Developers" src="Images/pp6.jpg" style="margin-top: 40px; margin-right: 50px; margin-left: 100px">
+            <div class="Info col-sm-2 " style="margin-top: 20px; margin-right: 50px; margin-left: 100px">
+                <b>MAAZ BUKHSH</b> <br>
+                <b>03228602733</b> <br>
+                <a href = "maazbukhsh7@gmail.com"><b>EMAIL</b></a> <br>
+                <a href = "https://www.facebook.com/maaz.bukhsh.3"><b>FACEBOOK</b></a> <br>
+            </div>
+        </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-</form>
+</div>
+
+
 
 <!--footer -->
 <footer class="page-footer font-small bg-dark ">
@@ -128,7 +208,7 @@
                         <a class="nav-link" href="login.html">Your Account</a>
                     </li>
                     <li class="footer-links">
-                        <a class="nav-link" href="register.php">Become a Member</a>
+                        <a class="nav-link" href="register.html">Become a Member</a>
                     </li>
                     <li class="footer-links">
                         <a class="nav-link" href="aboutus.html">About Us</a>
@@ -152,6 +232,9 @@
         </div>
     </div>
 </footer>
-
 </body>
+
 </html>
+
+
+

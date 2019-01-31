@@ -1,34 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>forget</title>
-
 <head>
-
     <meta charset="UTF-8">
-    <meta name="description" content="forgotpassword">
-    <meta name="keywords" content="HTML,CSS,BOOTSTRAP">
-    <meta name="author" content="ABUBAKER">
+
+    <meta name="description" content="login-gracias">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="60">
+    <meta http-equiv="refresh" content="80">
 
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Old+Standard+TT">
     <link rel="stylesheet" href="css/stylesheet.css">
-
-
-    <style>
-        .mid{
-            margin: auto;
-            margin-top: 39px;
-            width: 385px;
-            padding: 40px;
-            border-radius: 5%;
-            box-shadow: -3px 9px 9px #8888BA;
-            text-align: center;
-            background-color: #F1F0F2
-        }
-    </style>
 </head>
 <body>
 <!--new navbar responsive-->
@@ -44,19 +28,19 @@
                 <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contactus.html">Contact Us</a>
+                <a class="nav-link" href="contactus.php">Contact Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="aboutus.html">About Us</a>
+                <a class="nav-link" href="aboutus.php">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="login.html">Login</a>
+                <a class="nav-link " href="login.php">Login</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="register.php">Sign Up</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="forgotpassword.html">Forgot Password</a>
+                <a class="nav-link" href="forgotpassword.php">Forgot Password</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -66,34 +50,24 @@
     </div>
 </nav>
 
-<div class="container mid">
-    <div>
-        <h5><i class="fa fa-lock fa-4x "></i></h5>
-        <h2>Forgot Password?</h2>
-        <p>You can reset your password here.</p>
+<form class="login-form">
+    <div class="login-container col-sm-10">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required placeholder="example@example.com">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control " id="exampleInputPassword1"  required placeholder="Password">
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Stay loged in</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </div>
-    <div>
-        <form id="register-form" role="form" autocomplete="off" class="form" method="post">
-
-            <div class="form-group">
-
-                <div class="input-group">
-
-                        <input class="form-control" id="email" name="email" placeholder=" email address"   type="email"
-                               style="height: 40px; border: inset;">
-
-                </div>
-            </div>
-
-
-            <div class="form-group">
-                <input name="recover-submit" class="btn btn-lg" value="Reset Password" type="submit"
-                       style=" width: 240px;height: 48px;background: aqua;border-radius: 20px;">
-            </div>
-
-        </form>
-    </div>
-</div>
+</form>
 
 <!--footer -->
 <footer class="page-footer font-small bg-dark ">
@@ -178,8 +152,6 @@
         </div>
     </div>
 </footer>
-
-
 
 </body>
 </html>
