@@ -1,3 +1,8 @@
+
+* {
+    font-family: 'Old Standard TT', serif;
+}
+
 /*maaz*/
 #container{
     box-sizing: border-box;
@@ -27,11 +32,6 @@ img{
     max-width: 200% ;
     height: auto ;
 }
-
-
-
-
-
 .col{
     box-sizing: border-box;
     width:100%;
@@ -40,8 +40,6 @@ img{
     margin-bottom: 10%;
     overflow: hidden;
 }
-
-
 @media screen and (min-width: 500px) {
     .col{
         box-sizing: border-box;
@@ -88,10 +86,8 @@ img{
 
     }
 }
-
-
-
 /*ansari*/
+
 .nav-bar-container{
     width: auto;
     margin: 10px 0px 0px 50px;
@@ -150,4 +146,42 @@ footer{
     border-radius: 360px;
     cursor: help;
     max-width: 200px;
+}
+/*Shoaib */
+@media screen and (max-width: 320px) {
+    label{
+        display: none;
+    }
+}
+body{
+    padding: 0.2em;
+}
+
+@media screen and (max-width: 375px){
+    label{
+        display: none;
+    }
+}
+@media screen and (max-width: 441px){
+    /*pixel 2xl*/
+    label{
+        display: none;
+    }
+}
+@media screen and (min-width: 665px){
+    label{
+        display: none;
+    }
+}
+@media screen and (min-width: 667px){
+    label{
+        display: inline-block;
+    }
+}
+.my-container{
+    width: 725px;
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 2%;
+    box-shadow: 5px 8px 8px #8888BA;
 }
