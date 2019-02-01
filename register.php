@@ -109,7 +109,7 @@ if(isset($_POST['sign_up']))
             <div class="col-12 col-sm-10 col-md-4">
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="fas fa-file-signature"></i></div>
+                        <!--<div class="input-group-text"><i class="fas fa-file-signature"></i></div>-->
                     </div>
                     <input type="text" class="form-control fontstyle" id="id_name"  name="pro_name"  placeholder="Enter Full Name"
                            required pattern="^[A-Z]?[a-z]\w*?" >
@@ -121,7 +121,7 @@ if(isset($_POST['sign_up']))
             <div class="mt-sm-1 mt-lg-0 col-12 col-sm-10 col-md-4 ">
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="fas fa-envelope"></i></div>
+                        <!--<div class="input-group-text"><i class="fas fa-envelope"></i></div>-->
                     </div>
                     <input type="text" class="form-control fontstyle" id="pro_email"  name="pro_email"  placeholder="Enter email"
                            onkeyup="checkEmail(this.value)" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
@@ -136,7 +136,7 @@ if(isset($_POST['sign_up']))
             <div class=" mt-sm-1 mt-lg-0 col-12 col-sm-10 col-md-4">
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="fas fa-phone"></i></div>
+                       <!-- <div class="input-group-text"><i class="fas fa-phone"></i></div>-->
                     </div>
                     <input type="text" class="form-control fontstyle"  id="pro_num"  name="pro_num" placeholder="Enter Phone Number " required pattern="^(03|\+92(\s|-)?3|0092(\s|-)?3)\d{2}(\s|-)?\d{7}$" >
                 </div>
@@ -147,7 +147,7 @@ if(isset($_POST['sign_up']))
             <div class=" mt-sm-1  mt-lg-0 col-12 col-sm-10 mt-2 col-md-4">
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="fas fa-file-signature"></i></div>
+                       <!-- <div class="input-group-text"><i class="fas fa-file-signature"></i></div>-->
                     </div>
                     <input type="text" class="form-control fontstyle" id="pro_code"   placeholder="SMS Verification Code " required pattern="\d+" >
                 </div>
@@ -160,7 +160,7 @@ if(isset($_POST['sign_up']))
             <div class="mt-sm-1  mt-lg-0 col-12 col-sm-10 col-md-4">
                 <div class="input-group ">
                     <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="fas fa-key"></i></div>
+                     <!--   <div class="input-group-text"><i class="fas fa-key"></i></div>-->
                     </div>
                     <input type="password" class="form-control fontstyle" id="pro_password"  name="pro_password" placeholder="Minimum lenght 6" required pattern="\d*?\w*?">
                 </div>
@@ -171,7 +171,7 @@ if(isset($_POST['sign_up']))
             <div class="mt-sm-1 mt-lg-0 col-12 col-sm-10 mt-2  col-md-4">
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="fas fa-birthday-cake"></i></div>
+                     <!--   <div class="input-group-text"><i class="fas fa-birthday-cake"></i></div>-->
                     </div>
                     <input class="form-control fontstyle"  type="date" id="start" name="pro_birthdate">
                 </div>
@@ -186,7 +186,7 @@ if(isset($_POST['sign_up']))
             <div class="mt-sm-1 mt-lg-0 col-12 col-sm-10 col-md-4 ">
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="fas fa-list-alt"></i></div>
+                      <!--  <div class="input-group-text"><i class="fas fa-list-alt"></i></div>-->
                     </div>
                     <select class="form-control fontstyle" id="pro_gender"  name="pro_gender" >
                         <option>Gender</option>
